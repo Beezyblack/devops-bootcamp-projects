@@ -18,7 +18,7 @@ This project demonstrates setting up a Nexus repository on a DigitalOcean drople
 # SSH into the droplet from the terminal
 ssh root@<your_droplet_ip>
 ```
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2011.51.11.png)
 
 
 ### 2. Update Dependencies and Install Java
@@ -32,7 +32,7 @@ apt install openjdk-8-jre-headless
 # Install additional network tools
 apt install net-tools
 ```
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2011.56.58.png)
 
 ### 3. Download and Extract Nexus
 ```sh
@@ -45,7 +45,7 @@ wget https://download.sonatype.com/nexus/3/nexus-3.68.1-02-java8-mac.tgz
 # Extract the Nexus tar file
 tar -zxvf nexus-3.68.1-02-java8-mac.tgz
 ```
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.02.30.png)
 
 
 ### 4. Configure Nexus User
@@ -57,7 +57,9 @@ adduser nexus
 chown -R nexus:nexus nexus-3.68.1-02
 chown -R nexus:nexus sonatype-work
 ```
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.09.34.png)
+
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.12.05.png)
 
 
 ### 5. Update Nexus Configuration
@@ -68,7 +70,6 @@ vim nexus-3.68.1-02/bin/nexus.rc
 # Add the following line
 run_as_user="nexus"
 ```
-![Alt text](./images/screenshot.png)
 
 
 ### 6. Start Nexus
@@ -79,7 +80,7 @@ su - nexus
 # Start the Nexus application
 /opt/nexus-3.68.1-02/bin/nexus start
 ```
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.24.19.png)
 
 
 ### 7. Verify Nexus Is Running
@@ -90,8 +91,11 @@ netstat -lnpt
 ```
 Ensure Nexus is running on port `8081`.
 
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.30.13.png)
 
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.29.58.png)
+
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2012.31.00.png)
 
 ### 8. Configure and Publish Java Artifacts
 ```sh
@@ -99,4 +103,6 @@ Ensure Nexus is running on port `8081`.
 # Note: Specific steps for editing these files are not included as they depend on the project requirements.
 ```
 
-![Alt text](./images/screenshot.png)
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2013.27.33.png)
+
+![Alt text](https://github.com/Beezyblack/devops-bootcamp-projects/blob/main/Run-Nexus-on-Droplet-and-Publish-Artifact-to-Nexus/images/Screenshot%202024-05-26%20at%2015.06.07.png)
